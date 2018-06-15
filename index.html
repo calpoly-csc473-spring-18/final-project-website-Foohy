@@ -1,0 +1,101 @@
+<html>
+<head>
+   <title>Real-Time OpenGL Path Tracer</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="style.css">
+   <style>
+        body {
+            background-image: url("bgblur.png");
+            background-repeat: no-repeat;
+    background-attachment: fixed;
+        }
+
+        .well
+        {
+            background-color: rgba(119, 226, 253, 0.25);
+            border-color: rgb(0, 95, 139);
+        }
+
+        p, li, h1, h2
+        {
+            color: white;
+        }
+
+        #bums
+        {
+            filter: drop-shadow(0 0 0.75rem rgb(0, 101, 126));
+        }
+
+    </style>
+</head>
+
+<body class="container">
+
+   <div class="page-header">
+   <center>
+      <h1>Real-Time OpenGL Path Tracer<br><small>Scott Kauker</small></h1>
+   </center>
+   </div>
+    <center>
+        <center><img id="bums" src="img1.png" width=900 height=505></center></br>
+    </center>
+    </br>
+
+   <div class="well well-lrg">
+      <h1>Description</h1>
+      <p>Rendering real-time path traced images in a glsl shader to create interesting global lighting scenes.</p>
+   </div>
+
+   <div class="well well-lrg">
+      <h1>Features</h1>
+      <ul>
+         <li>Monte-Carlo ray selection with cosine-weighted hemisphere distributions</li>
+         <li>Adjustable samples per-pixel and ray bounce length</li>
+         <li>Optionally fully render a scene by pressing F, fully resolving in seconds</li>
+         <li>Supports spheres, planes, and kind of cylinders, each with their own properties, color, and light emittance</li>
+         <li>Optional gaussian blur for noise elimination</li>
+         <li>Allow a free-look camera to move around the active scene.</li>
+         <li>Scene can be adjusted through uniform inputs</li>
+         <li>Reflections</li>
+         <li>Uses OpenGL spec 3.2, so it is widely compatible with many consumer PCs</li>
+      </ul>
+   </div>
+
+   <div class="well well-lrg">
+    <h1>Video Demonstrations</h1></br>
+   <!-- <center><iframe width="560" height="420" src="https://www.youtube.com/embed/zrqfosClpVI" frameborder="0" allowfullscreen></iframe></center> -->
+   <p>Demonstration of a basic dynamic scene with a moveable sphere light source.</p>
+   <center><iframe width="920" height="480" src="https://www.youtube.com/embed/dxpVKIoqCpU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></center></br>
+   </br>
+   <p>A similar scene, but demonstrating reflective spheres and a dynamic emittance value of the bottom plane based on time.</p>
+   <center><iframe width="920" height="480" src="https://www.youtube.com/embed/G713ydbpVyg" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></center></br>
+    </br>
+   <p>Even further experiments with dynamic emittance, as well as a brightly emitting cylindrical beam of light.</p>
+   <center><iframe width="920" height="480" src="https://www.youtube.com/embed/F2iTYEABqR0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></center></br>
+
+   
+   </div>
+
+   </div>
+
+   <div class="well well-lrg">
+    <h1>Images</h1>
+    <center><img src="img2.png" width=900 height=505></center></br>
+    <center><img src="img3.png" width=900 height=505></center></br>
+    <center><img src="img4.png" width=900 height=505></center></br>
+    <center><img src="img1.png" width=900 height=505></center></br>
+    <center><img src="img6.png" width=900 height=505></center></br>
+    <center><img src="img7.png" width=900 height=505></center></br>
+   </div>
+
+   <div class="well well-lrg">
+      <h1>Resources</h1>
+      <ul>
+         <li><a href="http://raytracey.blogspot.com/">Ray Tracey's blog and introduction to real-time path tracing - http://raytracey.blogspot.com/</a></li>
+         <li><a href="https://github.com/LWJGL/lwjgl3-demos/blob/master/res/org/lwjgl/demo/opengl/raytracing/randomCommon.glsl">Lots of good GLSL snippets for random noise and different randomness distributions - LWJGL</a></li>
+      </ul>
+   </div>
+
+</body>
+
+</html>
